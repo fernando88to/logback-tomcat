@@ -124,7 +124,7 @@ environments:
             url: jdbc:h2:mem:testDb;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
     production:
         logging:
-            config: /usr/local/tomcat/webapps/ROOT/WEB-INF/classes/logback.groovy
+            config: ${CATALINA_HOME}/webapps/ROOT/WEB-INF/classes/logback.groovy
         dataSource:
             dbCreate: none
             url: jdbc:h2:./prodDb;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
